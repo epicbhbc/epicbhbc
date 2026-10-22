@@ -1,18 +1,38 @@
-name: My YourTomo cat
-on:
-  schedule:
-    - cron: '23 */6 * * *'   # every 6h - pick your own minute
-  workflow_dispatch:
+name: Generate GitHub Pet
 
-permissions:
-  contents: write
+on:
+  # Runs automatically every 24 hours
+  schedule:
+    - cron: "0 0 * * *" 
+  
+  # Allows you to manually trigger the workflow
+  workflow_dispatch:
+  
+  # Runs every time you push to the main branch
+  push:
+    branches:
+      - main
 
 jobs:
-  pet:
+  build:
     runs-on: ubuntu-latest
+    
     steps:
-      - uses: actions/checkout@v4
-      - uses: prsdx/github-pet@v1
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Replace 'author/github-pet-action@v1' with the specific 
+      # pet action repository you are trying to use if you have a specific one
+      - name: Generate Pet SVGs
+        uses: author/github-pet-action@v1 
         with:
-          username: epicbhbc       
-          timezone-offset-minutes: "480" 
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # Ensures it saves to the dist/ folder that your HTML is looking for
+          output_dir: dist 
+
+      - name: Commit and Push the generated files
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update GitHub pet status"
+          branch: main
+          file_pattern: 'dist/*.svg'
