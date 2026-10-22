@@ -55,7 +55,7 @@
 
 <br>
 <br>
-![pet](https://raw.githubusercontent.com/epicbhbc/epicbhbc/main/dist/pet-badge.svg)
+
 
 <div align="center">
   <picture>
