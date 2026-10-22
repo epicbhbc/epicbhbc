@@ -8,20 +8,24 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
     
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      # This is the corrected, real action repository
-      - name: Generate Pet SVGs
-        uses: prsdx/github-pet@main 
+      - name: Generate Snake Animation
+        uses: Platane/snk@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          output_dir: dist 
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/pet-light.svg
+            dist/pet.svg?palette=github-dark
 
       - name: Commit and Push the generated files
         uses: stefanzweifel/git-auto-commit-action@v5
