@@ -3,12 +3,19 @@
 
   # 👋 heyya, im gabriel
   *Computer Science Student @ Mapua | Software Developer*
+  <br>
 <br>
 *inactive here*
 <br>
   📫 Reach me at: **verzosagabriel4@gmail.com**
   <br>
   <img src="https://img.shields.io/badge/discord-epicbhbc-blue?logo=discord" />
+</div>
+
+<div align="center">
+  <a href="https://github.com/piyushsuthar/github-readme-quotes">
+    <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=catppuccin_mocha&border=true" alt="Readme Quotes" />
+  </a>
 </div>
 
 <br>
@@ -47,3 +54,5 @@
 </div>
 
 <br>
+
+
