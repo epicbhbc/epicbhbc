@@ -57,8 +57,10 @@
 <br>
 ![pet](https://raw.githubusercontent.com/epicbhbc/epicbhbc/main/dist/pet-badge.svg)
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/epicbhbc/epicbhbc/main/dist/pet.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/epicbhbc/epicbhbc/main/dist/pet-light.svg">
-  <img alt="my github pet" src="https://raw.githubusercontent.com/epicbhbc/epicbhbc/main/dist/pet.svg" width="100%">
-</picture>
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/epicbhbc/epicbhbc/main/dist/pet.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/epicbhbc/epicbhbc/main/dist/pet-light.svg">
+    <img alt="my github pet" src="https://raw.githubusercontent.com/epicbhbc/epicbhbc/main/dist/pet.svg" width="100%">
+  </picture>
+</div>
